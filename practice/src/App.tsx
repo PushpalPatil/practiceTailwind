@@ -1,44 +1,27 @@
-import { useState } from 'react'
 import './App.css'
+import './Task'
 
-export type TaskData = {
-    id: number
-    title: string,
-    description: string
-  }
-type TaskProps = {
-  taskData: TaskData,
-  buttonClicked: false,
-}
-
-const initializeTask: TaskData[] = [
-    {
-      id: 0,
-      title: "Sweep the Kitchen",
-      description: "Get Under the cabinets, do a good job"
-    }
-]
 
 
 function App() {
-  const [tasks, setTasks] = useState(initializeTask)
-
-  const buttonStyling = "bg-origin-padding:10-rem bg-gray-300 items-center px-4 py-2 hover:bg-green-300 sm:px-8 sm:py-3 rounded-b-sm"
-  const titleStyling = "font-medium"
-  const descriptionStyling = "font-small"
-
-
+  
   return (
-    <>
-    <div className = "flex flex-col">
-      <div className = "flex flex-row justify-center align-middle border-2" >
-        <button className="bg-origin-padding:10-rem bg-gray-300 items-center px-4 py-2 hover:bg-green-600 sm:px-8 sm:py-3 rounded-b-sm"></button>
-        <div className = {titleStyling}> taskData</div>
-      </div>
-    </div>
-    </>
+    
+ 
+      <div className = "flex flex-row items-center w-4xs m-5 border-1 border-gray-300 pl-3.5 rounded-xl " >
+        <button className='hover:bg-green-600 h-2 p-2.5 rounded-md border-1 border-gray-400'> </button>
+
+        <div className='p-3.5 flex flex-col '>
+          <span className='font-medium  font-[inter] text-md pb-0 '> Sweep the Kitchen </span>
+          <span className='font- light font-[inter] text-sm text-gray-400 '> Get under the cabinets, do a good job</span>
+        </div>
+
+</div>
+
   )
 }
+
+
 
 
 export default App
