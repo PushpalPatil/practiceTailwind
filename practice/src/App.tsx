@@ -8,9 +8,12 @@ function App() {
   
   // onClick={divSelected(divBase), buttonSelected(buttonBase)}  
   return (
-      <div className='w-full flex flex-row items-center font-[inter]'>
-        <TaskList/>
-      </div>
+    
+
+    <div className='w-full flex flex-row items-center font-[inter]'>
+      
+      <TaskList/>
+    </div>
   )
 }
 
