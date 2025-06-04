@@ -14,6 +14,18 @@ const initializeTasks: TaskData[] = [
         name: 'Dishwashing',
         description: 'Wash and dry dishes, pots, pans, and utensils',
         selected: false
+    },
+    {
+        id: 2,
+        name: 'Vacuuming',
+        description: 'Vacuum carpets, rugs, amd floors throughout the house',
+        selected: false
+    },
+    {
+        id: 3,
+        name: 'Dusting',
+        description: 'Dust furniture, shelves, and other surfaces',
+        selected: false
     }
 ]
 
@@ -32,7 +44,9 @@ function TaskList(){
     }
 
     return (
+        
         <div className='p-3.5 flex flex-col items-center'>
+            <span className='pt-5 font-[inter] font-normal text-5xl pr-96 pb-3'> Task List </span>
             {tasks.sort((task1, task2) => task1.selected ? -1:1).map((task) => <Task taskData = {task} toggleSelected = {() => toggleTask(task.id)} /> )}
         </div>
     )
